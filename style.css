@@ -1,0 +1,69 @@
+
+
+.container{
+    border: solid yellow;
+    width: 100%;
+    height: 500px;
+
+
+}
+
+
+
+.first{
+    border: solid blue;
+    width: 85%;
+    height: 70px;
+    margin-left: 60px;
+    margin-top: 20px;
+
+   } 
+   
+
+.second{
+    width: 80%;
+    height: 180px;
+    margin-left: 60px;
+    display:flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.s1{
+    border: solid palevioletred;
+    flex: 1;
+    padding: 10px;
+
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.s2{
+    border: solid purple;
+    flex: 1;
+    padding: 10px;
+
+    
+
+}
+
+.s3{
+    border:solid brown;
+flex: 1;
+padding: 9px;
+
+}
+
+.third{
+    border: solid red;
+    width: 85%;
+    margin-left: 60px;
+    margin-top: 20px;
+    height: 95px;
+}
+
