@@ -15,42 +15,50 @@
 
 
 .first{
-    padding: 10px;
+    padding: 20px;
     border: solid blue;
-    height: 40px;
+    height: 20px;
     margin-top: 40px;
-    width: 100%;
     
+    justify-content: center;
     display: flex;
-    gap:15px;
-    
-    flex-direction: row;
+    gap:55px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+
 
     
 }
 
-.second{
+.second {
     border: solid green;
     margin-top: 30px;
-    height: 500px;
     position: relative;
     width: 100%;
-  height: 900px;
-  /* display: block; */
-
+    height: 600px; /* Set a consistent height */
+    overflow: hidden; /* Hide any overflow */
 }
+
+  
+
+
 .text{
     position: absolute;
-  top: 50%; /* Adjust vertical position */
-  left: 50%; /* Adjust horizontal position */
+  top: 90%; /* Adjust vertical position */
+  left: 20%; /* Adjust horizontal position */
   transform: translate(-50%, -50%); /* Center the text */
   color: white; /* Text color */
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   padding: 10px 20px;
   font-size: 24px;
-  text-align: center;
+
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will cover the entire container */
+}
 
 </style>
 
@@ -77,12 +85,11 @@
 </div>
 
 <div class="second">
-<img src="./OSK.jpg" alt="visionImage" height="500px" width="100%">
+<img src="./OSK.jpg" alt="visionImage" >
 <div class="text">Hello i am Elon Musk</div>
 
 
 <div class="s1">
-
 
 
 

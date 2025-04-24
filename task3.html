@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            color: white;
+        }
+        
+        .container {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./image.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+        }
+        
+        .top {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+        }
+        
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .navbar {
+            display: flex;
+            gap: 30px;
+            font-size: 16px;
+            border: none;
+        }
+        
+        .navbar p {
+            cursor: pointer;
+        }
+        
+        .navbar p.active {
+            border-bottom: 3px solid #32e0c4;
+            padding-bottom: 5px;
+        }
+        
+        /* Basic animations */
+        @keyframes dropDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes floatUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 180px;
+        }
+        
+        .text h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: dropDown 1s ease;
+        }
+        
+        .text p {
+            margin-bottom: 30px;
+            font-size: 16px;
+            animation: floatUp 1s ease 0.5s forwards;
+            opacity: 0;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .watch-btn {
+            animation: floatUp 1s ease 1s forwards;
+            opacity: 0;
+        }
+        
+        .subscribe-btn {
+            animation: floatUp 1s ease 1.5s forwards;
+            opacity: 0;
+        }
+        
+        button {
+            background: transparent;
+            border: 2px solid #32e0c4;
+            border-radius: 25px;
+            padding: 12px 30px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #32e0c4;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="logo">!Nterior</div>
+            <div class="navbar">
+                <p>HOME</p>
+                <p>BEDROOM</p>
+                <p>DINING</p>
+                <p class="active">KITCHEN</p>
+                <p>BACKYARD</p>
+            </div>
+        </div>
+        
+        <div class="text">
+            <h1>DESIGN YOUR HOUSE</h1>
+            <p>Subscribe Easy Tutorials YouTube Channel to watch more videos,<br>press the bell icon to get latest updates.</p>
+            <div class="buttons">
+                <div class="watch-btn">
+                    <button>WATCH MORE</button>
+                </div>
+                <div class="subscribe-btn">
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
