@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers Hiring Sewa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background: #ffffff;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hindi-text {
+            color: #27ae60;
+            margin-left: 5px;
+            font-size: 18px;
+        }
+        
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+        }
+        
+        .account-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .main-content {
+            display: flex;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .text-content {
+            flex: 1;
+            padding: 40px 20px;
+            text-align: center;
+            z-index: 2;
+        }
+        
+        .text-content h1 {
+            color: #2c6975;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .text-content p {
+            color: #2c6975;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .image-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .person-img {
+            width: 300px;
+            height: auto;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        
+        .wave-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            font-size: 14px;
+            color: #2c6975;
+            text-align: right;
+        }
+        
+        .sewa-hindi {
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <div class="logo-text">Developers <span class="hindi-text">सेवा</span></div>
+                <img src="/api/placeholder/50/50" alt="Logo" class="logo-icon">
+            </div>
+            <button class="account-btn">create account?</button>
+        </nav>
+        
+        <div class="main-content">
+            <svg class="wave-bg" viewBox="0 0 500 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,100 C150,20 350,180 500,0 L500,500 L0,500 Z" fill="#e6e0f7"></path>
+            </svg>
+            
+            <div class="text-content">
+                <h1>Welcome to Developers Hiring <span class="sewa-hindi">सेवा</span></h1>
+                <p>We connect exceptional tech talent with innovative<br>companies looking to build remarkable products.</p>
+                <p>Our platform streamlines the hiring process,<br>bringing together skilled developers and forward-<br>thinking employers in a seamless ecosystem.</p>
+                
+                <div class="buttons">
+                    <button class="btn" style="background-color: #e74c3c;">Sign up</button>
+                    <button class="btn" style="background-color: #e74c3c;">Sign in</button>
+                </div>
+            </div>
+            
+            <div class="image-content">
+                <img src="/api/placeholder/300/400" alt="Developer pointing" class="person-img">
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>Developers Hiring सेवा</p>
+            <p>copyright@developerssewa.com</p>
+        </div>
+    </div>
+</body>
+</html>

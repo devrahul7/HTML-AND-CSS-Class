@@ -1,0 +1,117 @@
+/* Tag selector */
+p {
+    color: blue;
+  }
+   
+  h1 {
+    font-size: 24px;
+  }
+   
+  table {
+    border: 1px solid black;
+  }
+   
+  /* ID selector */
+  #header {
+    background-color: lightgray;
+    padding: 10px;
+  }
+   
+  /* Class selector */
+  .navbar {
+    background-color: navy;
+    color: white;
+    padding: 10px;
+  }
+   
+  /* Universal selector */
+  * {
+    font-family: Arial, sans-serif;
+  }
+   
+  /* Grouping selector */
+  #header,
+  h1,
+  p {
+    margin: 10px;
+  }
+   
+  /* Pseudo-element selectors */
+  h1::first-letter {
+    font-size: 200%;
+    color: red;
+  }
+   
+  p::first-line {
+    font-weight: bold;
+  }
+   
+  h2::before {
+    content: "📌 ";
+  }
+   
+  h3::after {
+    content: " ✅";
+  }
+   
+  ::selection {
+    background-color: rgb(158, 16, 201);
+    color: black;
+  }
+   
+  /* Pseudo-class selectors */
+  a:link {
+    color: green;
+  }
+   
+  a:visited {
+    color: purple;
+  }
+   
+  a:hover {
+    color: red;
+  }
+   
+  a:active {
+    font-weight: bold;
+  }
+   
+  li:first-child {
+    text-decoration: underline;
+  }
+   
+  li:last-child {
+    color: orange;
+  }
+   
+  li:nth-child(2) {
+    color: darkgreen;
+  }
+   
+  /* Combinators */
+  #header h1 {
+    color: darkblue;
+  }
+   
+  div > p {
+    border: 1px dashed black;
+  }
+   
+  div + p {
+    background-color: lightyellow;
+  }
+   
+  div ~ p {
+    font-style: italic;
+  }
+   
+  /* Attribute selectors */
+  a[target] {
+    background-color: rgb(0, 0, 0);
+  }
+   
+  input[type="text"] {
+    border: 2px solid gray;
+  }
+   
+   

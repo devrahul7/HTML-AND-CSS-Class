@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors Guide</title>
+    <link rel="stylesheet" href="./sstyle.css">
+</head>
+<body>
+    <div class="container">
+        <header id="main-header">
+            <h1>Advanced CSS Selectors Guide</h1>
+            <nav>
+                <ul>
+                    <li><a href="#basic">Basic</a></li>
+                    <li><a href="#advanced">Advanced</a></li>
+                    <li><a href="#pseudo">Pseudo</a></li>
+                    <li><a href="#combinators">Combinators</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="basic" class="card">
+            <h2>Basic Selectors</h2>
+            <p class="intro">CSS offers several ways to select HTML elements. The most basic selectors target elements by their tag name, class, or ID.</p>
+            <p>This paragraph demonstrates <span class="highlight">class selector styling</span> with highlighted text.</p>
+            <p>Elements can be selected by their attributes too!</p>
+        </section>
+
+        <div class="flex-container">
+            <div class="flex-item">
+                <h3>Form Elements</h3>
+                <form>
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" required placeholder="Your email">
+                    </div>
+                    <div>
+                        <button type="button">Regular Button</button>
+                        <button type="button" disabled>Disabled Button</button>
+                    </div>
+                </form>
+            </div>
+            <div class="flex-item">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="https://example.com">HTTPS Link</a></li>
+                    <li><a href="http://example.net">HTTP Link</a></li>
+                    <li><a href="https://example.org">ORG Link</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <section id="advanced" class="card no-shadow">
+            <h2>Combinators</h2>
+            <div class="section">
+                <p>This paragraph is inside a div with class "section".</p>
+            </div>
+            <p>This paragraph comes right after the div.</p>
+            <p>This is another paragraph that follows the section div.</p>
+            <p empty></p>
+        </section>
+
+        <section id="pseudo" class="card">
+            <h2>Lists with Pseudo-classes</h2>
+            <ul>
+                <li>First item (first-child)</li>
+                <li>Second item</li>
+                <li>Third item (odd)</li>
+                <li>Fourth item (even)</li>
+                <li>Last item (last-child)</li>
+            </ul>
+        </section>
+
+        <footer class="card">
+            <p>Try selecting this text to see the ::selection pseudo-element in action!</p>
+            <p>View more examples of CSS selectors and experiment with them.</p>
+        </footer>
+    </div>
+</body>
+</html>
