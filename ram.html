@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Animation Keyframes */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromLeft {
+        from {
+          transform: translateX(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromRight {
+        from {
+          transform: translateX(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromTop {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes highlight {
+        0% {
+          background-position: -200% center;
+        }
+        100% {
+          background-position: 200% center;
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .highlight_bar {
+        display: flex;
+        border: 1px solid black;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        animation: slideInFromTop 0.8s ease-out;
+      }
+
+      .logo {
+        font-weight: bold;
+        animation: pulse 2s infinite ease-in-out;
+        cursor: pointer;
+      }
+
+      .highlight_bar p {
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 30px;
+        font-size: 1.4rem;
+        box-shadow: 1px 1px 7px grey;
+        animation: fadeIn 1s ease-in-out 0.3s backwards;
+      }
+
+      .logo1 {
+        font-weight: bold;
+        position: relative;
+        animation: pulse 3s infinite ease-in-out;
+      }
+
+      .navbar_items {
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar_items p {
+        position: relative;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      .navbar_items p:hover {
+        color: lightseagreen;
+      }
+
+      .navbar_items p::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: lightseagreen;
+        transition: width 0.3s ease;
+      }
+
+      .navbar_items p:hover::after {
+        width: 100%;
+      }
+
+      .home-page {
+        display: flex;
+        height: 900px;
+        justify-content: space-evenly;
+        margin-top: 12px;
+        overflow: hidden;
+      }
+
+      .context-page {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 500px;
+        animation: slideInFromLeft 1s ease-out 0.5s backwards;
+      }
+
+      .team-sub {
+        font-size: 1rem;
+        color: lightseagreen;
+        font-family: monospace;
+        letter-spacing: 3px;
+        animation: fadeIn 1.2s ease-in-out 0.7s backwards;
+      }
+
+      .team-head {
+        font-size: 2rem;
+        font-weight: bolder;
+        animation: slideInFromLeft 1.2s ease-out 0.9s backwards;
+      }
+
+      .download-btn {
+        padding: 8px 16px;
+        background-color: lightseagreen;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .download-btn:hover {
+        background-color: #16a085;
+      }
+
+      .free-btn {
+        padding: 10px 20px;
+        background-color: lightseagreen;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .free-btn:hover {
+        background-color: #16a085;
+        transform: translateY(-2px);
+      }
+
+      .button-part {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .work-btn {
+        padding: 12px 24px;
+        background-color: lightseagreen;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .work-btn:hover {
+        background-color: #16a085;
+        transform: translateY(-2px);
+      }
+
+      .line {
+        color: #666;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .line:hover {
+        color: lightseagreen;
+      }
+
+      footer {
+        background-color: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .chat-system {
+        display: inline-block;
+        padding: 15px 25px;
+        background-color: lightseagreen;
+        color: white;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .chat-system:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="highlight_bar">
+        <div class="logo">envomarket</div>
+        <p>Limited time offer, Buy XTRA WordPress theme only <b>$49</b></p>
+        <button class="download-btn" type="button">Download XTRA Theme</button>
+      </div>
+      <div class="navbar">
+        <div class="logo1">Logo</div>
+        <div class="navbar_items">
+          <p>Home</p>
+          <p>About</p>
+          <p>Services</p>
+          <p>Blog</p>
+          <p>Pages</p>
+          <p>Contact</p>
+        </div>
+        <button class="free-btn">Free Consulation</button>
+      </div>
+      <div class="home-page">
+        <div class="context-page">
+          <p class="team-sub">We are expert Team</p>
+          <p class="team-head">
+            We create products that makes people's lives easier & better
+          </p>
+          <div class="button-part">
+            <button class="work-btn">How it works?</button>
+            <p class="line">Read the full story line</p>
+          </div>
+        </div>
+        <img src="./ram.avif" alt="image-home page" />
+      </div>
+      <footer>
+        <div class="chat-system">Chat system</div>
+      </footer>
+    </div>
+  </body>
+</html>
