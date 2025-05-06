@@ -5,8 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsiveness Design</title>
-    <link rel="stylesheet" href="./task7.css">
+    <!-- <link rel="stylesheet" href="./task7.css"> -->
 
+    <style>
+        .navbar {
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text {
+    text-align: center;
+    font-size: larger;
+}
+.imagebox1 {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: larger;
+    height: 130px;
+    margin: 1rem;
+}
+.i1 {
+    border: solid green;
+    display: flex;
+    flex: 1.1;
+    height: 120px;
+    background-color: rgb(210, 210, 210);
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.i2 {
+    border: solid yellow;
+    display: flex;
+    flex: 1.1;
+    height: 120px;
+    background-color: rgb(210, 210, 210);
+    align-items: center;
+    justify-content: space-around;
+}
+.imagebox2 {
+    /* margin-top: 10px; */
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+    background-color: rgb(210, 210, 210);
+    height: 130px;
+}
+.copyright {
+    margin-top: 10px;
+    background-color: black;
+    height: 50px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+@media (min-width : 425px) {
+    .imagecontainer {
+        flex-direction: column;  }}
+
+@media (min-width : 425px) {
+    .navbar {
+        flex-direction: column;}}
+
+@media (min-width : 425px) {
+    .copyright {
+        flex-direction: column;
+    }
+}
+    </style>
 </head>
 
 <body>
