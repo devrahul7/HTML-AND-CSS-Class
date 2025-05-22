@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+#box{
+
+    width: 50%;
+    height: 50vb;
+    background-color: blueviolet;
+    border-radius: 30px;
+    background: linear-gradient(to right, green, lightgreen);
+}
+.red {
+    background-color: red !important;
+}
+
+#targetbox{
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.rounded{
+    border-radius: 20px ;
+}
+
+
+    </style>
+
+</head>
+<body>
+    <div id="box"></div>
+
+    <h1>Class Manipulation Demo</h1>
+
+    <div class="btn">
+        <button id="actred" onclick="addRed()" >Act.red</button>
+        <button id="red.remove" onclick="removeRed()" >Remove.red</button>
+        <button id="Toogle.blue" onclick="toggleBlue()">Toogleblue</button>
+        <button id="Toogle.rounded" onclick="toggleRounded()">Toogle.rounded</button>
+        <button id="Toogle.shadow" onclick="toggleshadow">Toogle.shadow</button>
+    </div>
+
+    <div id="targetbox"></div>
+
+    <script>
+
+        const box = document.getElementById("targetbox")
+    box.style.height="200px"
+    box.style.width="300px"
+
+
+
+function addRed(){
+    box.classList.add("red"); 
+}
+
+function removeRed(){
+    box.classList.remove("red")
+}
+
+
+function toggleBlue(){
+    box.classList.toggle("blue")
+}
+
+function toggleRounded(){
+    box.classList.toggle("rounded")
+
+}
+// function toggleRounded(){
+//     box.classList.toggle("rounded")
+// }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+    #addbag{
+      background-color: #8fee8f;
+      padding: 10px 15px;
+      border-radius: 10px;
+      
+    }
+
+    #addwishlist{
+      background-color: solid white;
+      padding: 10px 25px;
+      border-radius: 10px;
+    }
+    #additem{
+      background-color: #8fee8f;
+      padding: 10px 25px;
+      border-radius: 10px;
+    }

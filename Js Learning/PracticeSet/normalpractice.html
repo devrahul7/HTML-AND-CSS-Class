@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{  margin: 10px; }
+
+        h1{
+            margin: 17px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+
+    <h1>Heading</h1>
+
+    <input id="takeinput" type="text">
+    <button id="btn" onclick="add()">click Here</button>
+
+    <ul id="showelement">
+       
+    </ul>
+
+</div>
+
+<script>
+
+const takeinput = document.getElementById("takeinput");
+const inputfetch = document.getElementById("li");
+const showelement = document.getElementById("showelement");
+
+function add(){
+    const list = document.createElement("li")
+    list.innerText = takeinput.value
+    showelement.appendChild(list)
+
+   
+}
+
+</script>
+
+</body>
+</html>

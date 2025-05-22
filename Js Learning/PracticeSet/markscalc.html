@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="math">Math:</label>
+        <input type="number" id="math" name="math" required />
+
+        <label for="science">Science:</label>
+        <input type="number" id="science" name="science" required />
+
+        <label for="english">English:</label>
+        <input type="number" id="english" name="english" required />
+
+        <label for="social">Social:</label>
+        <input type="number" id="social" name="social" required />
+
+        <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+    <script>
+
+
+
+const form = document.getElementById("myForm");
+
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault(); 
+    const name = document.getElementById("name").value;
+    const math = document.getElementById("math").value;
+    const science = document.getElementById("science").value;
+    const english = document.getElementById("english").value;
+    const social = document.getElementById("social").value;
+    
+    console.log(name);  
+    console.log(math);  
+    console.log(science);
+    console.log(english);
+    console.log(social);
+    const total = parseInt(math) + parseInt(science) + parseInt(english) + parseInt(social);
+    const average = total / 4;
+    console.log(total);
+    console.log(average);
+    alert("Your average is " + average);
+
+    let grade;
+    if (average >= 90) {
+        grade = "A";
+    } else if (average >= 80) {
+        grade = "B";
+    } else if (average >= 70) {
+        grade = "C";
+    } else if (average >= 60) {
+        grade = "D";
+    } else {
+        grade = "F";
+    }
+    alert("Your grade is " + grade);
+
+    const result = document.getElementById("result");
+    result.innerHTML = "Your average is " + average + " and your grade is " + grade;
+
+    
+
+
+});
+
+
+
+    </script>
+    
+
+
+
+
+    
+</body>
+</html>

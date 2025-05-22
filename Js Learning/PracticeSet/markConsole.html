@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let total_marks;
+        let percentage;
+
+//         function garde(marks){
+//     if (marks>=70){
+//         console.log("Congratulation on grade A")
+//     }
+//     if (marks>=60){
+//         console.log("Congratulation on grade B")
+//     }
+//     if (marks>=50){
+//         console.log("Congratulation on grade C")}
+    
+//     if (marks>=40){
+//         console.log("Congratulation on grade D")}
+
+//     if (marks<0 | marks==0){
+//         console.log("Error Marks")
+//     }
+    
+// }
+// garde(2)
+
+
+function grade(marks) {
+    const subjectCount = marks.length;
+    const fullmarksPerSubject = 100;
+    const passingMarks = 40;
+    const totalPossibleMarks = subjectCount * fullmarksPerSubject;
+
+    let totalMarksObtained = 0;
+    let isPass = true;
+
+    for (let i = 0; i < subjectCount; i++) {
+        totalMarksObtained += marks[i];
+        if (marks[i] < passingMarks) {
+            isPass = false;
+        }
+    }
+    const percentage = (totalMarksObtained / totalPossibleMarks) * 100;
+
+    console.log("Marks in Each Subject:", marks);
+    console.log("Total Marks Obtained:", totalMarksObtained);
+    console.log("Total Possible Marks:", totalPossibleMarks);
+    console.log("Percentage:", percentage.toFixed(2) + "%");
+
+    if (isPass) {
+        console.log("Result: Pass");
+    } else {
+        console.log("Result: Fail");
+    }
+}
+
+const studentMarks = [85, 74, 67, 90, 78];
+grade(studentMarks);
+
+
+    </script>
+</body>
+</html>

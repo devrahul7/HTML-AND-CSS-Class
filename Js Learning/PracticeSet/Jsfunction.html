@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myntra Bag</title>
+  <link rel="stylesheet" href="./jsfunction.css">
+</head>
+<body>
+
+ <div class="navbar">
+  <button id="addbag" onclick=" cardQuantity += 1;
+    document.querySelector('#cardsummary').innerText = `your bag has  ${cardQuantity} items`;">Add To Bag</button>
+
+
+  <button id="addwishlist" onclick="
+  cardQuantity-=1 ;document.querySelector('#cardsummary').innerText = `your bag has  ${cardQuantity} items`;" >Move to WISHLIST</button>
+
+
+  <button id="additem" onclick="
+  cardQuantity+=2 ;document.querySelector('#cardsummary').innerText = `your bag has  ${cardQuantity} items`;">Add 1+1 sale item</button>
+
+  <h1 id="cardsummary">Your bag has 0 items</h1>
+ </div> 
+
+  <script >
+    let cardQuantity = 6;
+document.querySelector('#cardsummary').innerText = `your bag has  ${cardQuantity} items`;
+
+  </script>
+</body>
+</html>

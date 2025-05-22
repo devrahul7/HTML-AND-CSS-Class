@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Calculation</title>
+    <style>
+        h1 {
+            /* text-align: center;      */
+            margin-top: 40px;
+            transform: translate(43%);
+        }
+
+        .container {
+            border: solid black;
+            height: auto;
+            width: 60%;
+            margin-left: 300px;
+            padding-bottom: 20px;
+            border-radius: 0.5rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            /* flex-wrap: wrap; */
+            padding: 20px;
+        }
+
+        .btns {
+            margin-left: 340px;
+            margin-top: 60px;
+            display: flex;
+
+        }
+
+        label {
+            margin-left: 20px;
+        }
+
+        input {
+            width: 160px;
+            margin-left: 19px;
+            background-color: whitesmoke;
+            padding: 10px 15px;
+            border-radius: 0.5rem;
+        }
+
+        #btncalc {
+            padding: 10px 15px;
+            border-radius: 0.4rem;
+            background-color: green;
+        }
+              .topbar {
+            background-color: black;
+            display: flex;
+            color: wheat;
+            gap: 900px;
+            padding-inline-start: 30px;
+            padding: 8px;
+    
+        }
+
+        .navbar {
+            background-color: #69a999;
+        }
+        *{
+            margin: 0%;
+        }
+
+        nav {
+            display: flex;
+            /* list-style: none; */
+            gap: 30px;
+            justify-content: end;
+            font-size: 130%;
+            height: 80px;
+            margin: 0%;
+            align-items: center;
+            padding-inline-end: 35px;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="topbar">
+            <p>Connect With Us:</p>
+
+            <div class="contact-info">
+                <p>info@example.com | Call Us Now: 9742869215</p>
+            </div>
+
+        </div>
+
+        <div class="navbar">
+            <!-- <div class="logo-text">COMPANY<br>NAME</div> -->
+            <nav>
+                <ul><a href="#" class="active">Home</a></ul>
+                <ul><a href="#">About Us</a></ul>
+                <ul><a href="./subjectcalc.html">Result</a></ul>
+                <ul><a href="#">Blog</a></ul>
+                <ul><a href="#">Contact</a></ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <h1><b>Result Calculation</b></h1>
+    <br>
+    <div class="container">
+        <h2 style="padding-left: 250px;">Enter Your Subject Marks you Scored</h2>
+        <form id="marksForm">
+            <label for="sub1">Web Development</label>
+            <input type="number" id="sub1" max="100" min="0" />
+
+            <label for="sub2">Software Development</label>
+            <input type="number" id="sub2" max="100" min="0" />
+
+            <label for="sub3">Kotlin</label>
+            <input type="number" id="sub3" max="100" min="0" />
+
+            <label for="sub4">Programming For developers</label>
+            <input type="number" id="sub4" max="100" min="0" />
+
+            <div class="btns">
+                <button id="btncalc" type="button" onclick="calculateResults()">Calculate Results</button>
+            </div>
+
+            <div id="showerror">
+
+            <p   id="showerror"> </p>
+
+            </div>
+            <div id="results" style="display:none; margin-left: 20px; margin-top: 20px;">
+                <h3>Results:</h3>
+                <p>Total Marks Obtained: <span id="obtainedMarks"></span></p>
+                <p>Percentage: <span id="percentage"></span>%</p>
+                <p>Grade: <span id="grade"></span></p>
+            </div>
+
+
+        </form>
+
+    </div>
+
+    <script>
+
+        showerror = showerror(document.getElementById.)
+        function calculateResults() {
+
+            const sub1 = Number(document.getElementById('sub1').value) || 0;
+            const sub2 = Number(document.getElementById('sub2').value) || 0;
+            const sub3 = Number(document.getElementById('sub3').value) || 0;
+            const sub4 = Number(document.getElementById('sub4').value) || 0;
+
+
+
+
+            const totalMarks = sub1 + sub2 + sub3 + sub4;
+
+            const percentage = (totalMarks / 400) * 100;
+
+            if (sub1 < 0 || sub2 < 0 || sub3 < 0 || sub4 < 0) {
+                console.log(alert("number cannot be negative"))
+                return
+            }
+
+            if (sub1 > 100 || sub2 > 100 || sub3 > 100 || sub4 > 100) {
+                alert("Error Input Marks > than 100")
+                return
+            }
+
+            let grade;
+            if (percentage >= 90) {
+                grade = "A+";
+            } else if (percentage >= 80) {
+                grade = "A";
+            } else if (percentage >= 70) {
+                grade = "B";
+            } else if (percentage >= 60) {
+                grade = "C";
+            } else if (percentage >= 50) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+
+            document.getElementById('obtainedMarks').textContent = totalMarks;
+            document.getElementById('percentage').textContent = percentage.toFixed(2);
+            document.getElementById('grade').textContent = grade;
+            document.getElementById('results').style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
