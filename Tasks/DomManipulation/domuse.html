@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./domeuse.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h2>Contact Form</h2>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact">Contact No</label>
+                    <input type="tel" id="contact" name="contact" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+        
+        <div class="details-section">
+            <h3>Details</h3>
+            
+            <div id="submittedData" class="submitted-details" style="display: none;">
+                <p><strong>Name:</strong> <span id="displayName">-</span></p>
+                <p><strong>Email:</strong> <span id="displayEmail">-</span></p>
+                <p><strong>Contact:</strong> <span id="displayContact">-</span></p>
+                <p><strong>Address:</strong> <span id="displayAddress">-</span></p>
+            </div>
+            
+            <button class="info-btn" onclick="showMoreInfo()" id="moreInfoBtn">More Information</button>
+            
+            <div id="additionalInfo" class="additional-info">
+                <p id="detailsParagraph"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./domuse.js">
+    </script>
+</body>
+</html>
